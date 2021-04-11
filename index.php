@@ -103,7 +103,7 @@ else {
 			 <div class="col-md-12" class="form-group">
 			 <label class"col-md-3">Type Device Id:</label>
 			 <div id="th_id" class="row"> 
-				<input class"col-md-6" type="text" style="margin-bottom: 8px;margin-left: 10px;padding: 6px;border: none;font-size: 15px;border-radius: 10px;box-shadow: 0 2px 5px #ff7c7c, 0 0 0;" id="search_did" name="search_did" placeholder="Serach Device id" class="typeahead">
+				<input class"col-md-6" type="text" style="margin-bottom: 8px;margin-left: 10px;padding: 6px;border: none;font-size: 15px;border-radius: 10px;box-shadow: 0 2px 5px #ff7c7c, 0 0 0;" id="search_did" name="search_did" placeholder="Search Device id" class="typeahead">
                 <button class"col-md-3"  id="ser1" style="margin-bottom: 8px;margin-left: 10px;" onclick="search_did()" class="btn btn-success">Search</button>
 				</div>
 
