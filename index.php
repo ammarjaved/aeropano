@@ -134,7 +134,7 @@ else {
 
 
 	
-<script src="http://malsup.github.com/jquery.form.js"></script>
+<script src="login/jquery.form.js"></script>
 <script src="scripts/main.js"></script>
 <link rel="stylesheet" href="lib/window-engine.css" />
 <script src="lib/window-engine.js"></script>
