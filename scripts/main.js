@@ -635,5 +635,37 @@ function getDeviceIdDataLayer(table){
     }
 
 
+function drawRect() {
+    var polygonDrawer = new L.Draw.Rectangle(map);
+    polygonDrawer.enable();
+}
+$(document).ready(function(){
+    setTimeout(function(){
+    map.on(L.Draw.Event.CREATED, function(event) {
+        var layer = event.layer.toGeoJSON();
+        console.log(layer);
+        getLayerAllDataResult(JSON.stringify(layer.geometry))
+    });
+    },3000)
+})
 
+function getLayerAllDataResult(geom){
+    var tbl=$("#tableLayer").val();
 
+    $.ajax({
+        url: 'services/GetALLData.php?geom='+geom+'&tbl='+tbl,
+        dataType: 'JSON',
+        //data: data,
+        method: 'GET',
+        async: false,
+        success: function callback(data) {
+           // console.log(data);
+            var jsonHtmlTable = ConvertJsonToTable(data, 'all_data1', 'table table-border', 'Download');
+            $("#all_data").html(jsonHtmlTable);
+
+        }
+    });
+
+}
+
+        

@@ -44,6 +44,8 @@ else {
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <script type="text/javascript" src="scripts/json-to-table.js"></script>
+
 
 
 
@@ -99,6 +101,10 @@ else {
                     <option value="street_light">street_light</option>
                 </select>
             </div>
+            <div class="col-md-12" class="form-group">
+                <button class"col-md-12"   style="margin-bottom: 8px;margin-left: 10px;margin-top:20px;" onclick="drawRect()" class="btn btn-success">Draw AOI to Open Attribute of selected Layer</button>
+
+            </div>
 			
 			 <div class="col-md-12" class="form-group">
 			 <label class"col-md-3">Type Device Id:</label>
@@ -110,16 +116,31 @@ else {
 			</div>	   
 			
 
-            <div class="col-md-12" style="height: 70vh ;overflow-y: scroll;">
-                <table class="table table-border">
-                    <tr>
-                        <td>Field</td>
-                        <td>value</td>
-                    </tr>
-                    <tbody id="my_data" >
+            <div class="col-md-12" >
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#feature_data">Feature Data</a></li>
+                    <li><a data-toggle="tab" href="#all_data">All Data</a></li>
+                </ul>
 
-                    </tbody>
-                </table>
+                <div class="tab-content" style="height: 50vh ;overflow-y: scroll;">
+                    <div id="feature_data" class="tab-pane fade in active">
+                        <table class="table table-border">
+                            <tr>
+                                <td>Field</td>
+                                <td>value</td>
+                            </tr>
+                            <tbody id="my_data" >
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="all_data" class="tab-pane fade">
+
+
+                    </div>
+
+                </div>
+
             </div>
 
         </div>
