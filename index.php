@@ -119,7 +119,7 @@ else {
             <div class="col-md-12" >
                 <ul class="nav nav-tabs">
                     <li class="active"><a data-toggle="tab" href="#feature_data">Feature Data</a></li>
-                    <li><a data-toggle="tab" href="#all_data">All Data</a></li>
+<!--                    <li><a data-toggle="tab" href="#all_data">All Data</a></li>-->
                 </ul>
 
                 <div class="tab-content" style="height: 50vh ;overflow-y: scroll;">
@@ -134,10 +134,10 @@ else {
                             </tbody>
                         </table>
                     </div>
-                    <div id="all_data" class="tab-pane fade">
-
-
-                    </div>
+<!--                    <div id="all_data" class="tab-pane fade">-->
+<!---->
+<!---->
+<!--                    </div>-->
 
                 </div>
 
@@ -148,6 +148,12 @@ else {
         <div id="wg" class="windowGroup">
 
         </div>
+
+    <div id="wg1" style="width: 800px;height: 400px;
+
+" class="windowGroup">
+
+    </div>
 
 
 

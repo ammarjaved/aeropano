@@ -661,7 +661,21 @@ function getLayerAllDataResult(geom){
         success: function callback(data) {
            // console.log(data);
             var jsonHtmlTable = ConvertJsonToTable(data, 'all_data1', 'table table-border', 'Download');
-            $("#all_data").html(jsonHtmlTable);
+            //$("#all_data").html(jsonHtmlTable);
+            var str='<div id="window2" class="window">' +
+                '<div class="green" style="width: 800px;">' +
+                '<p class="windowTitle">Layer Attribute Table</p>' +
+                '</div>' +
+                '<div class="mainWindow">' +
+                // '<canvas id="canvas" width="400" height="480">' +
+                // '</canvas>' +
+                '<div   style="overflow: scroll;background-color: white;opacity: 1;height: 480px;width: 800px;">'+jsonHtmlTable+'</div>'+
+            '</div>' +
+            '</div>'
+
+            $("#wg1").html(str);
+
+            createWindow(2);
 
         }
     });
