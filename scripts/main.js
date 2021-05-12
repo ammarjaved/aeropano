@@ -660,7 +660,8 @@ function getLayerAllDataResult(geom){
         async: false,
         success: function callback(data) {
            // console.log(data);
-            var jsonHtmlTable = ConvertJsonToTable(data, 'all_data1', 'table table-border', 'Download');
+           // var jsonHtmlTable = ConvertJsonToTable(data, 'all_data1', 'table table-border', 'Download');
+
             //$("#all_data").html(jsonHtmlTable);
             var str='<div id="window2" class="window">' +
                 '<div class="green" style="width: 800px;">' +
@@ -669,11 +670,13 @@ function getLayerAllDataResult(geom){
                 '<div class="mainWindow">' +
                 // '<canvas id="canvas" width="400" height="480">' +
                 // '</canvas>' +
-                '<div   style="overflow: scroll;background-color: white;opacity: 1;height: 480px;width: 800px;">'+jsonHtmlTable+'</div>'+
+                '<div id="wg3"   style="overflow: scroll;background-color: white;opacity: 1;height: 480px;width: 800px;"></div>'+
             '</div>' +
             '</div>'
 
             $("#wg1").html(str);
+
+         CreateTableFromJSON(data)
 
             createWindow(2);
 
@@ -682,4 +685,48 @@ function getLayerAllDataResult(geom){
 
 }
 
-        
+
+function CreateTableFromJSON(data) {
+
+    // EXTRACT VALUE FOR HTML HEADER.
+    // ('Book ID', 'Book Name', 'Category' and 'Price')
+    var col = [];
+    for (var i = 0; i < data.length; i++) {
+        for (var key in data[i]) {
+            if (col.indexOf(key) === -1) {
+                col.push(key);
+            }
+        }
+    }
+
+    // CREATE DYNAMIC TABLE.
+    var table = document.createElement("table");
+
+    table.className = 'table table-bordered';
+
+    // CREATE HTML TABLE HEADER ROW USING THE EXTRACTED HEADERS ABOVE.
+
+    var tr = table.insertRow(-1);                   // TABLE ROW.
+
+    for (var i = 0; i < col.length; i++) {
+        var th = document.createElement("th");      // TABLE HEADER.
+        th.innerHTML = col[i];
+        tr.appendChild(th);
+    }
+
+    // ADD JSON DATA TO THE TABLE AS ROWS.
+    for (var i = 0; i < data.length; i++) {
+
+        tr = table.insertRow(-1);
+
+        for (var j = 0; j < col.length; j++) {
+            var tabCell = tr.insertCell(-1);
+            tabCell.innerHTML = data[i][col[j]];
+        }
+    }
+
+    // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
+    var divContainer = document.getElementById("wg3");
+    divContainer.innerHTML = "";
+    divContainer.appendChild(table);
+}

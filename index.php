@@ -149,9 +149,7 @@ else {
 
         </div>
 
-    <div id="wg1" style="width: 800px;height: 400px;
-
-" class="windowGroup">
+    <div id="wg1" class="windowGroup">
 
     </div>
 
