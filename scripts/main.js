@@ -14,7 +14,7 @@ $(document).ready(function() {
         var st=L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png')
             //.addTo(map);
         var st1=L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
-            maxZoom: 20,
+            maxZoom: 21,
             subdomains:['mt0','mt1','mt2','mt3']
         }).addTo(map);
 
@@ -22,7 +22,7 @@ $(document).ready(function() {
        customer = L.tileLayer.wms("http://121.121.232.54:7090/geoserver/cite/wms", {
             layers: 'cite:pano_layer',
             format: 'image/png',
-			maxZoom: 20,
+			maxZoom: 21,
             transparent: true
         }, {buffer: 10});
         customer.addTo(map);
@@ -30,7 +30,7 @@ $(document).ready(function() {
 		grid = L.tileLayer.wms("http://121.121.232.54:7090/geoserver/cite/wms", {
             layers: 'cite:5x5_sub_grid',
             format: 'image/png',
-            maxZoom: 20,
+            maxZoom: 21,
             transparent: true
         }, {buffer: 10});
         grid.addTo(map);
@@ -38,7 +38,7 @@ $(document).ready(function() {
 		boundary = L.tileLayer.wms("http://121.121.232.54:7090/geoserver/cite/wms", {
             layers: 'cite:boundary_bangi_east_',
             format: 'image/png',
-            maxZoom: 20,
+            maxZoom: 21,
             transparent: true
         }, {buffer: 10});
         boundary.addTo(map);
@@ -46,7 +46,7 @@ $(document).ready(function() {
         dp = L.tileLayer.wms("http://121.121.232.54:7090/geoserver/cite/wms", {
             layers: 'cite:demand_point',
             format: 'image/png',
-            maxZoom: 20,
+            maxZoom: 21,
             transparent: true
         }, {buffer: 10});
         dp.addTo(map);
@@ -54,7 +54,7 @@ $(document).ready(function() {
         lcj = L.tileLayer.wms("http://121.121.232.54:7090/geoserver/cite/wms", {
             layers: 'cite:lv_cable_joint',
             format: 'image/png',
-            maxZoom: 20,
+            maxZoom: 21,
             transparent: true
         }, {buffer: 10});
         lcj.addTo(map);
@@ -62,7 +62,7 @@ $(document).ready(function() {
         lf = L.tileLayer.wms("http://121.121.232.54:7090/geoserver/cite/wms", {
             layers: 'cite:lv_fuse',
             format: 'image/png',
-            maxZoom: 20,
+            maxZoom: 21,
             transparent: true
         }, {buffer: 10});
         lf.addTo(map);
@@ -70,7 +70,7 @@ $(document).ready(function() {
 		 ohc = L.tileLayer.wms("http://121.121.232.54:7090/geoserver/cite/wms", {
             layers: 'cite:lv_oh_conductor',
             format: 'image/png',
-            maxZoom: 20,
+            maxZoom: 21,
             transparent: true
         }, {buffer: 10});
         ohc.addTo(map);
@@ -78,7 +78,7 @@ $(document).ready(function() {
         ugc = L.tileLayer.wms("http://121.121.232.54:7090/geoserver/cite/wms", {
             layers: 'cite:lv_ug_conductor',
             format: 'image/png',
-            maxZoom: 20,
+            maxZoom: 21,
             transparent: true
         }, {buffer: 10});
         ugc.addTo(map);
@@ -86,7 +86,7 @@ $(document).ready(function() {
         lvdb = L.tileLayer.wms("http://121.121.232.54:7090/geoserver/cite/wms", {
             layers: 'cite:lvdb_fp',
             format: 'image/png',
-            maxZoom: 20,
+            maxZoom: 21,
             transparent: true
         }, {buffer: 10});
         lvdb.addTo(map);
@@ -94,7 +94,7 @@ $(document).ready(function() {
         manhole = L.tileLayer.wms("http://121.121.232.54:7090/geoserver/cite/wms", {
             layers: 'cite:manhole',
             format: 'image/png',
-            maxZoom: 20,
+            maxZoom: 21,
             transparent: true
         }, {buffer: 10});
         manhole.addTo(map);
@@ -102,7 +102,7 @@ $(document).ready(function() {
         street_light = L.tileLayer.wms("http://121.121.232.54:7090/geoserver/cite/wms", {
             layers: 'cite:street_light',
             format: 'image/png',
-            maxZoom: 20,
+            maxZoom: 21,
             transparent: true
         }, {buffer: 10});
         street_light.addTo(map);
@@ -110,7 +110,7 @@ $(document).ready(function() {
         pole = L.tileLayer.wms("http://121.121.232.54:7090/geoserver/cite/wms", {
             layers: 'cite:pole',
             format: 'image/png',
-            maxZoom: 20,
+            maxZoom: 21,
             transparent: true
         }, {buffer: 10});
         pole.addTo(map);
@@ -118,7 +118,7 @@ $(document).ready(function() {
         structure_duct = L.tileLayer.wms("http://121.121.232.54:7090/geoserver/cite/wms", {
             layers: 'cite:structure_duct',
             format: 'image/png',
-            maxZoom: 20,
+            maxZoom: 21,
             transparent: true
         }, {buffer: 10});
         structure_duct.addTo(map);
