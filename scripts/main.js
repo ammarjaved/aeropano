@@ -730,3 +730,19 @@ function CreateTableFromJSON(data) {
     divContainer.innerHTML = "";
     divContainer.appendChild(table);
 }
+
+function zoomToMyXy(){
+    var lat =$("#dms_lat").val().split(' ');
+    var lon =$("#dms_lon").val().split(' ');
+    var dd1 = Number(lat[0].split('°')[0]) + Number(lat[1].split('\'')[0])/60 + Number(lat[2].split('"')[0])/(60*60);
+    var dd2 = Number(lon[0].split('°')[0]) + Number(lon[1].split('\'')[0])/60 + Number(lon[2].split('"')[0])/(60*60);
+    console.log(dd1)
+    var arr=[];
+    arr.push(dd2)
+    arr.push(dd1)
+    map.setView(arr,18);
+    L.marker(arr).addTo(map);
+
+
+
+}

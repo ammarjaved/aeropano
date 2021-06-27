@@ -113,8 +113,26 @@ else {
                 <button class"col-md-3"  id="ser1" style="margin-bottom: 8px;margin-left: 10px;" onclick="search_did()" class="btn btn-success">Search</button>
 				</div>
 
-			</div>	   
-			
+			</div>
+
+            <div style="padding-bottom: 5px;" class="col-md-12" class="form-group">
+                <label class="col-md-12">DMS</label>
+                <div style="padding-left: 0px;" class="col-md-12">
+                    <div>
+                    <div class="col-md-5">
+                    <input id="dms_lat" class="col-md-4 form-control" placeholder="101° 58' 35.7"  type="text" />
+                    </div>
+                    <div class="col-md-5">
+                    <input id="dms_lon" class="col-md-4 form-control" placeholder="2° 58' 35.7"  type="text" />
+                    </div>
+                    <div class="col-md-2">
+                    <button  onclick="zoomToMyXy()" class="btn btn-success">Search</button>
+                    </div>
+                    </div>
+                </div>
+
+            </div>
+
 
             <div class="col-md-12" >
                 <ul class="nav nav-tabs">
