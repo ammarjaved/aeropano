@@ -3,12 +3,13 @@ class Connection
 {
    public $hostname = 'localhost';
     public $database    = 'LV_Production_Grid_1';
+   // public $database    = 'abc';
    // public $database    = 'LV_Production_Bangi_East1';
     public $username     = 'postgres';
     public $password     = 'Admin123';
-    //public $password     = '123';
+   // public $password     = '123';
     public $port     = '5433';
-   // public $port     = '5432';
+    //public $port     = '5432';
 
     public $conDB;
 
