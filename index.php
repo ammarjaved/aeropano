@@ -99,6 +99,7 @@ else {
                     <option value="pole">pole</option>
                     <option value="manhole">manhole</option>
                     <option value="street_light">street_light</option>
+                    <option value="bangi_kmz">bangi_kmz</option>
                 </select>
             </div>
             <div class="col-md-12" class="form-group">

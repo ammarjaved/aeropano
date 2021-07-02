@@ -115,6 +115,14 @@ $(document).ready(function() {
         }, {buffer: 10});
         pole.addTo(map);
 
+        bangi_kmz = L.tileLayer.wms("http://121.121.232.54:7090/geoserver/cite/wms", {
+            layers: 'cite:bangi_kmz',
+            format: 'image/png',
+            maxZoom: 21,
+            transparent: true
+        }, {buffer: 10});
+        bangi_kmz.addTo(map);
+
         structure_duct = L.tileLayer.wms("http://121.121.232.54:7090/geoserver/cite/wms", {
             layers: 'cite:structure_duct',
             format: 'image/png',
@@ -122,6 +130,8 @@ $(document).ready(function() {
             transparent: true
         }, {buffer: 10});
         structure_duct.addTo(map);
+
+
 
 
         /*  var drawnItems = new L.FeatureGroup();
@@ -244,7 +254,8 @@ $(document).ready(function() {
 					"manhole":manhole,
 					"street_light":street_light,
 					"pole":pole,
-					"structure_duct":structure_duct
+					"structure_duct":structure_duct,
+                    "bangi_kmz":bangi_kmz
 
             }
         };
@@ -476,6 +487,9 @@ function activeSelectedLayerOther(val) {
         }
         if(val=='street_light'){
             sel_lyr=street_light
+        }
+        if(val=='bangi_kmz'){
+            sel_lyr=bangi_kmz
         }
         map.off('click');
         map.on('click', function (e) {
